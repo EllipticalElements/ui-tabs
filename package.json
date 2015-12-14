@@ -1,0 +1,11 @@
+{
+  "name": "ui-tabs",
+  "description": "tabs web component",
+  "version": "1.0.0",
+  "author": "S. Francis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EllipticalElements/ui-tabs.git"
+  }
+}
