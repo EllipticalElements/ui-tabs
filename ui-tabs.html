@@ -1,29 +1,58 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../elliptical-polymer-behaviors/component-behavior.html">
 <link rel="import" href="../ui-behaviors/tabs.html">
 
 <script>
-Elliptical(function(){
-    $.element.registerElement('tab-items');
-    $.element.registerElement('tab-item');
-    $.element.registerElement('content-items');
-    $.element.registerElement('tab-content');
 
-    $.component('ui-tabs',[Elliptical.Behaviors.Tabs],{
-        options: {
-            proxyUpgrade:true,
-            border: false,
-            borderTop: false,
-            borderLeft: false,
-            minHeight: null,
-            animateSections: false,
-            duration: 500,
-            flex: false,
-            preventDefault: false,
-            autoHide: true,
-            stopPropagation: true,
-            scopeBind:false
+    Polymer({
+
+        is: 'ui-tabs',
+
+        behaviors:[Elliptical.ComponentBehavior,Elliptical.Behaviors.Tabs],
+
+        properties: {
+            border: {
+                type:Boolean,
+                value:false
+            },
+            borderTop: {
+                type:Boolean,
+                value:false
+            },
+            borderLeft: {
+                type:Boolean,
+                value:false
+            },
+            minHeight: {
+                value:null
+            },
+            animateSections: {
+                type:Boolean,
+                value:false
+            },
+            duration: {
+                value:500
+            },
+            flex: {
+                type:Boolean,
+                value:false
+            },
+            preventDefault: {
+                type:Boolean,
+                value:false
+            },
+            autoHide: {
+                type:Boolean,
+                value:true
+            },
+            stopPropagation: {
+                type:Boolean,
+                value:true
+            }
+
         },
 
-        _initComponent: function(){
+        ready:function(){
             this._setData();
             this._getTabs();
             this._initActiveTab();
@@ -34,7 +63,6 @@ Elliptical(function(){
             this.__events();
         }
 
-
     });
-});
+
 </script>
