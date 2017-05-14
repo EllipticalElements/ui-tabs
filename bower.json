@@ -1,7 +1,7 @@
 {
   "name": "ui-tabs",
   "description": "tabs web component",
-  "version":"1.2.0",
+  "version":"1.2.1",
   "main": "ui-tabs.html",
   "authors": [
     "S. Francis"
